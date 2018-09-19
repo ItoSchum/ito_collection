@@ -1,7 +1,7 @@
 title = "Ito Collection"
 baseURL = "https://itoschum.me"
 languageCode = "en-us"
-theme = "gohugo-theme-ananke"
+theme = "ananke"
 themesDir = "./themes"
 
 MetaDataFormat = "yaml"
