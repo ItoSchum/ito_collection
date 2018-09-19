@@ -1,4 +1,33 @@
-baseURL = "http://example.org/"
+title = "Ito Collection"
+baseURL = "https://itoschum.me"
 languageCode = "en-us"
-title = "My New Hugo Site"
 theme = "ananke"
+themesDir = "./themes"
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  favicon = ""
+  description = "The last theme you'll ever need. Maybe."
+  facebook = "https://www.facebook.com/ItoShen"
+  twitter = "https://twitter.com/Ito_Shen"
+  instagram = ""
+  youtube = "https://www.youtube.com/channel/UCFxxWKktr2IjvTKxy33luZQ"
+  github = "https://github.com/ItoSchum"
+  gitlab = ""
+  linkedin = "https://www.linkedin.com/in/yitao-shen-9869b3132/"
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  body_classes = "avenir bg-near-white"
+  featured_image = "/images/background/Miku_2B_Remix.png"
+  recent_posts_number = 3
