@@ -31,4 +31,4 @@ enableRobotsTXT = true
   body_classes = "avenir bg-near-white"
   featured_image = "/images/background/miku_2B_remix.jpg"
   recent_posts_number = 3
-  disqusShortname = "itoschum-me"
+  disqus = "itoschum-me"
