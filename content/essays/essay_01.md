@@ -83,12 +83,12 @@ Final Cut Pro X 经过重新打造，在视频剪辑方面进行了大规模更�
 
 参考资料：
 
-Final Cut Pro - Wikipedia
+[Final Cut Pro - Wikipedia](https://link.zhihu.com/?target=https%3A//en.wikipedia.org/wiki/Final_Cut_Pro)
 
-Final Cut Pro X - 实际应用 - Apple (中国)
+[Final Cut Pro X - 实际应用 - Apple (中国)](https://link.zhihu.com/?target=http%3A//www.apple.com/cn/final-cut-pro/in-action/)
 
-Final Cut Pro_百度百科
+[Final Cut Pro_百度百科](https://link.zhihu.com/?target=http%3A//baike.baidu.com/item/Final%2520Cut%2520Pro)
 
-final cut pro x_百度百科
+[final cut pro x_百度百科](https://link.zhihu.com/?target=http%3A//baike.baidu.com/item/final%2520cut%2520pro%2520x)
 
-A Brief History of Final Cut Pro
+[A Brief History of Final Cut Pro](https://link.zhihu.com/?target=http%3A//interactivetimeline.com/884/a-brief-history-of-final-cut-pro/list.php%3Fw%3D480)
