@@ -1,6 +1,6 @@
 ---
 title: "Ito Collection"
-featured_image: '/images/background/Miku_2B_Remix.png'
+featured_image: '/images/miku_2B_remix.jpg'
 description: ""
 ---
 
