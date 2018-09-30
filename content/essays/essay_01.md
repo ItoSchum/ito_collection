@@ -51,7 +51,7 @@ featured_image: "/images/essay_01/fcpx_history_00.jpg"
 
 {{% figure src ="/images/essay_01/fcpx_history_05.jpg" %}}
 
-Final Cut Pro X 经过重新打造，在视频剪辑方面进行了大规模更新，引入了新的 Magnetic Timeline（中文译“磁性时间线”），可令多条剪辑片段如磁铁般吸合在一起了从而打破了老式的 Timeline 轨道的种种局限。而这一点正是吸收了 Apple 的消费级非线性剪辑软件 iMovie 的特性，此外借鉴 iMovie 的特性还有很多，如
+&emsp;&emsp;Final Cut Pro X 经过重新打造，在视频剪辑方面进行了大规模更新，引入了新的 Magnetic Timeline（中文译“磁性时间线”），可令多条剪辑片段如磁铁般吸合在一起了从而打破了老式的 Timeline 轨道的种种局限。而这一点正是吸收了 Apple 的消费级非线性剪辑软件 iMovie 的特性，此外借鉴 iMovie 的特性还有很多，如
 
 > 剪辑片段能够自动让位，避免剪辑冲突和同步问题，如 Clip Connections 片段相连功能可将B卷、音效和音乐等元素与主要视频片段链接在一起，如 Compound Clips 可将一系列复杂元素规整折叠起来，如 Auditions 则可将多个备选镜头收集到同一位置，循环播放来挑选最佳镜头。
 除此之外，Final Cut Pro X 在交互界面也有很多借鉴了 iMovie 的特性。
@@ -83,12 +83,12 @@ Final Cut Pro X 经过重新打造，在视频剪辑方面进行了大规模更�
 
 参考资料：
 
-[Final Cut Pro - Wikipedia](https://link.zhihu.com/?target=https%3A//en.wikipedia.org/wiki/Final_Cut_Pro)
+[Final Cut Pro - Wikipedia](https://en.wikipedia.org/wiki/Final_Cut_Pro)
 
-[Final Cut Pro X - 实际应用 - Apple (中国)](https://link.zhihu.com/?target=http%3A//www.apple.com/cn/final-cut-pro/in-action/)
+[Final Cut Pro X - 实际应用 - Apple (中国)](https://www.apple.com/cn/final-cut-pro/)
 
-[Final Cut Pro_百度百科](https://link.zhihu.com/?target=http%3A//baike.baidu.com/item/Final%2520Cut%2520Pro)
+[Final Cut Pro_百度百科](https://baike.baidu.com/item/Final%20Cut%20Pro)
 
-[final cut pro x_百度百科](https://link.zhihu.com/?target=http%3A//baike.baidu.com/item/final%2520cut%2520pro%2520x)
+[final cut pro x_百度百科](https://baike.baidu.com/item/final%20cut%20pro%20x)
 
 [A Brief History of Final Cut Pro](https://link.zhihu.com/?target=http%3A//interactivetimeline.com/884/a-brief-history-of-final-cut-pro/list.php%3Fw%3D480)
