@@ -3,7 +3,7 @@ date: 2017-02-28T23:20:00+08:00
 description: ""
 featured_image: ""
 tags: []
-title: "Unlock the Mac With the Apple Watch"
+title: "Unlock Mac over Apple Watch"
 featured_image: '/images/log_01/unlock_mac_over_applewatch_00.jpg'
 ---
 
