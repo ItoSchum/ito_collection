@@ -4,13 +4,13 @@ description: ""
 featured_image: ""
 tags: []
 title: "CloudKit Keychain's Database Crash"
-featured_image: '/images/log_04/CKKS_crash_00.png'
+featured_image: '/images/log_04/CKKS_crash_00.jpg'
 ---
 
 ## 现象描述
 > 包括但不限于以下表现
 
-### 异常流量
+### 1. 异常流量
 - iOS 出现大量异常流量，如果是在 Cellular 环境下，表现为 Setting > Cellular 中，Cellular Data 栏目出现大量的 System Service 流量，表现在 Documents & Sync 栏目中，如图。
 
 {{% figure src ="/images/log_04/CKKS_crash_01.jpg" %}} 
@@ -20,15 +20,15 @@ featured_image: '/images/log_04/CKKS_crash_00.png'
 {{% figure src ="/images/log_04/CKKS_crash_02.jpg" %}}  
 {{% figure src ="/images/log_04/CKKS_crash_03.png" %}}
 
-### 设备运行异常且大量发热
+### 2. 设备运行异常且大量发热
 - 设备可能会出现极其严重的卡顿，以至于进行难以操作，同时大量发热。
 
-### 大量第三方应用无法打开
+### 3. 大量第三方应用无法打开
 - 大量第三方应用可能会出现无法打开的情况，具体表现为：在 Splash Screen 卡顿，直至 10 秒后被系统强制退出的现象。
 
 > 目前发现「腾讯系」与「阿里系」应用似乎影响较小，可能 QQ、WeChat、AliPay 等应用仍然可以打开
 
-### iCloud Keychain 数据库大小异常
+### 4. iCloud Keychain 数据库大小异常
 - 在 Mac 的 `~/Library/Keychains/[UUID]/keychain-2.db` 可见 `keychain-2.db` 大小异常，可能为数百兆字节甚至超过 1 吉字节（正常大小应为几十兆字节）。
 - 使用 Sqlite 或相关 Sqlite 的 GUI 软件可见 `keychain-2.db` 中表 `ckmirror` 的数据项可能多达近 30000，正常情况应为几千条，正常情况如图（图为本人恢复后的截图）。
 
@@ -42,7 +42,7 @@ featured_image: '/images/log_04/CKKS_crash_00.png'
 > 虽然之前参考 [iOS异常流量消耗及大范围应用闪退问题的分析](https://blog.nyan.im/posts/3467.html) 备份了 Health 数据，本人在使用本方案恢复 CloudKit 后， Health 数据并未出现丢失，但仍然建议先对 Health 数据进行备份
 
 1. 首先，确认在 Mac 端的 `~/Library/Keychains/[UUID]/keychain-2.db` 查看 `keychain-2.db` 大小是否异常，可用命令 `ls -ahl | sort -k5 -hr` 查看该目录下各项目大小
-2. 若发现数据库大小有问题，先运行 `/usr/sbin/ckksctl` 保证自己的各项服务都处于 `logged in` 状态，否则以下操作可能无效<br>{{% figure src ="/images/log_04/CKKS_crash_04.png" %}}
+2. 若发现数据库大小有问题，先运行 `/usr/sbin/ckksctl status` 保证自己的各项服务都处于 `logged in` 状态，否则以下操作可能无效（`logged in` 状态如图）<br>{{% figure src ="/images/log_04/CKKS_crash_05.png" %}}
 3. 确认自己为 `logged in` 状态后，可使用命令 `/usr/sbin/ckksctl reset` 重置本地数据
 3. 再之后用命令 `/usr/sbin/ckksctl reset-cloudkit` 重置 CloudKit 数据
 4. 登出所有受影响设备的 iCloud
@@ -50,18 +50,21 @@ featured_image: '/images/log_04/CKKS_crash_00.png'
 6. 之后再陆续将其他设备的 iCloud 登入，此时 `keychain-2.db` 可能会由最初的 10MB 或更小增大，但基本维持在几十兆字节左右。
 
 - 注：本人最初先恢复了一台 Mac，之后再按此做法针对另一台 Mac 进行操作，结果数据库还是膨胀到了超过 600MB 的大小，于是之后采用了以上方法（本人猜测是本地的错误数据可能会被自动同步到 CloudKit）
+- 最后附上恢复前后的文件大小对比图
+
+{{% figure src ="/images/log_04/CKKS_crash_06.png" %}}
 
 > Command Reference:
- 
+> 
+> `/usr/sbin/ckksctl status`: Report status on CKKS views
 > `/usr/sbin/ckksctl reset`: All local data will be wiped, and data refetched from CloudKit<br>
 > `/usr/sbin/ckksctl reset-cloudkit`: All data in CloudKit will be removed and replaced with what's local<br>
 
-> 操作命令参考：[Reset Connections To ApplePay and Health With ckksctl](http://krypted.com/cloud/reset-connections-applepay-health-ckksctl/)
 
 ## Reference
-> 以下为本人最初找到的有关此问题的分析与解决方案的讨论
-
+> 以下为本人最初找到的有关此问题的分析与解决方案的讨论<br>
 > 在此表示感谢
 
-- [iOS异常流量消耗及大范围应用闪退问题的分析](https://blog.nyan.im/posts/3467.html)
-- [Reset Connections To ApplePay and Health With ckksctl](http://krypted.com/cloud/reset-connections-applepay-health-ckksctl/)
+- 目前最详细的问题分析汇总：[iOS异常流量消耗及大范围应用闪退问题的分析](https://blog.nyan.im/posts/3467.html)
+- MacRumors 的相关讨论：[Excessive data consumption for "Documents & Sync" and constantly high CPU load on iPhone and iPad](https://forums.macrumors.com/threads/excessive-data-consumption-for-documents-sync-and-constantly-high-cpu-load-on-iphone-and-ipad.2127349/)
+- 命令参考：[Reset Connections To ApplePay and Health With ckksctl](http://krypted.com/cloud/reset-connections-applepay-health-ckksctl/)
