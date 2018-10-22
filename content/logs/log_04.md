@@ -49,6 +49,8 @@ featured_image: '/images/log_04/CKKS_crash_00.png'
 5. 登入一台 Mac 设备，重新登入 iCloud，并运行命令 `/usr/sbin/ckksctl reset-cloudkit` 重置 CloudKit 数据
 6. 之后再陆续将其他设备的 iCloud 登入，此时 `keychain-2.db` 可能会由最初的 10MB 或更小增大，但基本维持在几十兆字节左右。
 
+- 注：本人最初先恢复了一台 Mac，之后再按此做法针对另一台 Mac 进行操作，结果数据库还是膨胀到了超过 600MB 的大小，于是之后采用了以上方法（本人猜测是本地的错误数据可能会被自动同步到 CloudKit）
+
 > Command Reference:
  
 > `/usr/sbin/ckksctl reset`: All local data will be wiped, and data refetched from CloudKit<br>
