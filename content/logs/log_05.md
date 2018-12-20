@@ -117,6 +117,12 @@ DISPLAY=/tmp/com.apple.launchd.cZDh63T4aX/org.macosforge.xquartz:0
 
 CACA_GEOMETRY=240x68 mpv -vo caca $INPUT
 ```
+## My Output Exhibition
+> 因为视频网站码率限制，被视频网站二压后，视频欠码，较模糊
+
+- Evangelion OP 
+	- YouTube: <https://youtu.be/JbMo_qHuyRw>
+	- Bilibili：<https://www.bilibili.com/video/av30360792>
 
 ## Reference
 > 以下为本人最初找到的有关此问题的解决方案<br>
