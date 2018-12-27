@@ -51,15 +51,15 @@ ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg
 > 通过 FFmpeg 完成对视频的逐帧截取，截图格式为 JPG
 
 ```
-ffmpeg -i $video_fps -r 30 -s $video_resolution -f image2 %7d.jpg
+ffmpeg -i $INPUT -r $video_fps -s $video_resolution -f image2 %7d.jpg
 ```
 
 ### 2. JPG to HTML via `img2txt`
 > 通过 img2txt 逐帧完成视频的 ASCII 风格转换，存为 HTML
 
 ```
-for ascii in $(ls *.jpg ) do ...
-	img2txt -W 128 -H 36 -x 3 -y 5 $(basename $ascii .jpg) -f html > _$ascii.html;
+for ascii in *.jpg
+	img2txt -W 128 -H 36 -x 3 -y 5 $ascii -f html > $(basename $ascii .jpg).html;
 ```
 
 - "-W 128" means 128 ASCII columns
@@ -70,8 +70,8 @@ for ascii in $(ls *.jpg ) do ...
 > 通过 webkit2png 完成对 HTML 到 PNG 的逐帧转换
 
 ```
-for LibCaca in $(ls *.html) do ...
-	webkit2png -o $(basename $LibCaca .jpg.html) $LibCaca;
+for LibCaca in *.html
+	webkit2png -F -o $(basename $LibCaca .html) $LibCaca;
 ```
 
 ### 4. PNG to Video via `ffmpeg`
@@ -80,16 +80,27 @@ for LibCaca in $(ls *.html) do ...
 > 可以先用 convert 将 PNG 图片先转换为 JPG 图片
 
 ```
-ffmpeg -threads $thread_amount -r $video_fps -i %07d.jpg png_packed_up.mp4
+ffmpeg -threads $thread_amount -r $video_fps -i %07d-full.png png_packed_up.mp4
 
 
 # YUV444 to YUV420
-ffmpeg -i $INPUT -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p $OUTPUT
+INPUT=packup_png.mp4
+OUTPUT=packup_yuv420.mp4
+
+ffmpeg -i $INPUT -movflags +faststart -pix_fmt yuv420p -c:v libx264 -crf 20 -preset slower -profile:v high -level 5.0 $OUTPUT
+
 
 # Frame Size Modify
+INPUT=packup_yuv420.mp4
+OUTPUT=packup_1080p.mp4
+
 ffmpeg -i $INPUT -c:a copy -vf crop=1920:1080:0:0 $OUTPUT
 
+
 # Scale and Pad
+INPUT=packup_1080p.mp4
+OUTPUT=packup_scaled.mp4
+
 ffmpeg -i $INPUT -c:a copy -vf "scale=1920:-1:force_original_aspect_ratio=decrease, pad=1920:1080:0:(1080-in_h)/2:black" -movflags +faststart $OUTPUT
 ```
 
