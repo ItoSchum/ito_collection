@@ -47,19 +47,28 @@ ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg
 > 
 > 此方法主要针对 CPU 性能不足的情况（会在录制时掉帧），通过对视频内容的逐帧转换来完成
 
+### 0. Requirement
+- ffmpeg
+- img2txt
+- webkit2png
+
 ### 1. Video to JPG via `ffmpeg`
 > 通过 FFmpeg 完成对视频的逐帧截取，截图格式为 JPG
 
 ```
-ffmpeg -i $INPUT -r $video_fps -s $video_resolution -f image2 %7d.jpg
+ffmpeg -threads $thread_amount \
+-i "$RAW_INPUT" \
+-r $video_fps -s $video_resolution -f image2 \
+%07d.jpg
 ```
 
 ### 2. JPG to HTML via `img2txt`
 > 通过 img2txt 逐帧完成视频的 ASCII 风格转换，存为 HTML
 
 ```
-for ascii in *.jpg
+for ascii in *.jpg; do
 	img2txt -W 128 -H 36 -x 3 -y 5 $ascii -f html > $(basename $ascii .jpg).html;
+done
 ```
 
 - "-W 128" means 128 ASCII columns
@@ -70,8 +79,9 @@ for ascii in *.jpg
 > 通过 webkit2png 完成对 HTML 到 PNG 的逐帧转换
 
 ```
-for LibCaca in *.html
+for LibCaca in *.html; do
 	webkit2png -F -o $(basename $LibCaca .html) $LibCaca;
+done
 ```
 
 ### 4. PNG to Video via `ffmpeg`
@@ -80,36 +90,30 @@ for LibCaca in *.html
 > 可以先用 convert 将 PNG 图片先转换为 JPG 图片
 
 ```
-ffmpeg -threads $thread_amount -r $video_fps -i %07d-full.png png_packed_up.mp4
-
-
-# YUV444 to YUV420
-INPUT=packup_png.mp4
-OUTPUT=packup_yuv420.mp4
-
-ffmpeg -i $INPUT -movflags +faststart -pix_fmt yuv420p -c:v libx264 -crf 20 -preset slower -profile:v high -level 5.0 $OUTPUT
-
-
-# Frame Size Modify
-INPUT=packup_yuv420.mp4
-OUTPUT=packup_1080p.mp4
-
-ffmpeg -i $INPUT -c:a copy -vf crop=1920:1080:0:0 $OUTPUT
-
+# Packup the images and encapsulate
+ffmpeg -threads $thread_amount -start_number 1 \
+-i %07d-full.png \
+-i "$RAW_INPUT" \
+-movflags +faststart \
+-c:v libx264 -pix_fmt yuv420p -crf 20 -r $video_fps \
+-preset slower -profile:v high -level 5.0 \
+-vf "crop=2458:1296:16:16" \
+-map 0:v:0 -map 1:a:0 output_yuv420.mp4
 
 # Scale and Pad
-INPUT=packup_1080p.mp4
-OUTPUT=packup_scaled.mp4
+INPUT=output_yuv420.mp4
+OUTPUT=output_scaled.mp4
 
-ffmpeg -i $INPUT -c:a copy -vf "scale=1920:-1:force_original_aspect_ratio=decrease, pad=1920:1080:0:(1080-in_h)/2:black" -movflags +faststart $OUTPUT
+ffmpeg -threads $thread_amount \
+-i $INPUT -c:a copy \
+-vf "scale=1920:1080:force_original_aspect_ratio=decrease, pad=1920:1080:0:(1080-in_h)/2:black" \
+$OUTPUT
 ```
 
-> Ref: 4:3 --> 16:9
-> 
-> e.g.
-```
--vf cropdetect, pad=ih*16/9:ih:(ow-iw)/2:0:black, scale=1920:1080
-```
+### Automation Script
+> 将上述步骤写成 Shell Script，并提供了几种输出模式 
+
+Shell Script：<https://github.com/ItoSchum/video_output_CACA>
 
 ## Other
 ### 1. Screenshot Capturing
@@ -128,7 +132,7 @@ DISPLAY=/tmp/com.apple.launchd.cZDh63T4aX/org.macosforge.xquartz:0
 
 CACA_GEOMETRY=240x68 mpv -vo caca $INPUT
 ```
-## My Output Exhibition
+## Output Demo
 > 因为视频网站码率限制，被视频网站二压后，视频欠码，较模糊
 
 - Evangelion OP 
