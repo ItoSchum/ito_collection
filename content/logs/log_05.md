@@ -11,7 +11,7 @@ featured_image: '/images/log_05/voCACA_00.jpg'
 > 在 CPU 性能足够的情况下，可以通过录制屏幕的方式来获得 LibCACA 输出的 ASCII 视频
 
 ### 1. List Devices
-> 首先列举出 AVFoundation 的输入设备
+> 列举出 AVFoundation 的输入设备
 
 ```
 ffmpeg -f avfoundation -list_devices true -i ""
@@ -132,7 +132,7 @@ DISPLAY=/tmp/com.apple.launchd.cZDh63T4aX/org.macosforge.xquartz:0
 
 CACA_GEOMETRY=240x68 mpv -vo caca $INPUT
 ```
-## Output Demo
+## Demo
 > 因为视频网站码率限制，被视频网站二压后，视频欠码，较模糊
 
 - Evangelion OP 
