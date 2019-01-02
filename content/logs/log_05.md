@@ -126,12 +126,25 @@ ffmpeg -ss 00:04:03 -i $INPUT -vframes 1 -f mjpeg sample.jpg
 ### 2. `DISPLAY` Setting
 > 在使用如`mpv --vo=caca` 命令时，有关在 XQuartz 的窗口或是在终端内输出视频的偏好设置
 
+- 如果希望使用 X11 作为输出：
+
 ```
 echo $DISPLAY
-DISPLAY=/tmp/com.apple.launchd.cZDh63T4aX/org.macosforge.xquartz:0
+DISPLAY=/private/tmp/com.apple.launchd.RTIBTlQGVu/org.macosforge.xquartz:0
+```
 
+- 如果希望直接在终端内输出：
+
+```
+DISPLAY=
+```
+
+- 也可以限定输出窗口大小：
+
+```
 CACA_GEOMETRY=240x68 mpv -vo caca $INPUT
 ```
+
 ## Demo
 > 因为视频网站码率限制，被视频网站二压后，视频欠码，较模糊
 
