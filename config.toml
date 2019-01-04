@@ -19,9 +19,9 @@ enableRobotsTXT = true
 [params]
   favicon = ""
   description = "Stay hungry. Stay foolish."
-  facebook = "https://www.facebook.com/ItoShen"
-  twitter = "https://twitter.com/Ito_Shen"
-  instagram = ""
+  facebook = "https://www.facebook.com/ItoSchum"
+  twitter = "https://twitter.com/Ito_Schum"
+  instagram = "https://www.instagram.com/ito_schum/"
   youtube = "https://www.youtube.com/channel/UCFxxWKktr2IjvTKxy33luZQ"
   github = "https://github.com/ItoSchum"
   gitlab = ""
