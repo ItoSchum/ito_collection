@@ -32,18 +32,10 @@ ffmpeg -y -f avfoundation \
 
 
 ### * Rec Terminal
-另一种办法是录制终端
+另一种办法是录制终端字符，在此使用现成的终端录制项目:
 
-- 使用 FFmpeg 进行录制：
-
-	```
-	# e.g.
-	ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg
-	```
-
-- 或使用现成的终端录制项目:
-	- asciinema: <https://asciinema.org/>
-	- ScreenShooter: <https://github.com/Jamesits/ScreenShooter.git>
+- asciinema: <https://asciinema.org/>
+- ScreenShooter: <https://github.com/Jamesits/ScreenShooter.git>
 
 ## Method 2: Format Converting
 > Process: Video --> JPG --> HTML --> JPG --> Video
