@@ -157,7 +157,6 @@ CACA_GEOMETRY=240x68 mpv -vo caca $INPUT
 	- Bilibili：<https://www.bilibili.com/video/av30360792>
 
 ## Reference
-以下为本人最初找到的有关此问题的解决方案<br>
-在此表示感谢
-	
+以下为本人最初找到的有关此问题的解决方案，在此表示感谢
+
 - <http://stariocek.asuscomm.com/watch-ascii-libcaca.html>
