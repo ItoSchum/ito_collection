@@ -128,17 +128,20 @@ echo $DISPLAY
 DISPLAY=/private/tmp/com.apple.launchd.RTIBTlQGVu/org.macosforge.xquartz:0
 ```
 
+- 输出到 X11 时，也可以限定输出窗口大小：
+
+```
+export CACA_GEOMETRY=240x68
+mpv -vo caca $INPUT
+```
+
 - 如果希望直接在终端内输出：
 
 ```
-DISPLAY=
+export DISPLAY=
 ```
 
-- 也可以限定输出窗口大小：
 
-```
-CACA_GEOMETRY=240x68 mpv -vo caca $INPUT
-```
 
 ## Demo
 > 因为视频网站码率限制，被视频网站二压后，视频欠码，较模糊
