@@ -159,7 +159,7 @@ export DISPLAY=
 
 - Evangelion OP 
 	- YouTube: <https://www.youtube.com/watch?v=6QspMamFR9U&list=PLOWxt7icmzKwRIqAnzFNOwedE3PVvKS7B>
-	- Bilibili：<https://www.bilibili.com/video/av30360792>
+	- Bilibili：<https://www.bilibili.com/video/av40204551>
 
 ## Reference
 以下为本人最初找到的有关此问题的解决方案，在此表示感谢
