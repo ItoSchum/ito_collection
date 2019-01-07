@@ -149,7 +149,7 @@ CACA_GEOMETRY=240x68 mpv -vo caca $INPUT
 > 因为视频网站码率限制，被视频网站二压后，视频欠码，较模糊
 
 - Evangelion OP 
-	- YouTube: <https://youtu.be/JbMo_qHuyRw>
+	- YouTube: <https://www.youtube.com/watch?v=6QspMamFR9U&list=PLOWxt7icmzKwRIqAnzFNOwedE3PVvKS7B&index=3>
 	- Bilibili：<https://www.bilibili.com/video/av30360792>
 
 ## Reference
