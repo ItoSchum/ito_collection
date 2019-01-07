@@ -76,7 +76,7 @@ featured_image: "/images/essay_01/fcpx_history_00.jpg"
 
 &emsp;&emsp;如今，虽然在 Apple 工作了20多年的 Randy Ubillos 宣布退休，但随着新款 MacBook Pro with Multi-Touch Bar 的发布，Final Cut Pro 10.3 正式面世，Final Cut Pro 10.3 在新款 MacBook Pro 上的表现相比老板本，不论是在交互设计还是性能上都迎来了飞跃性的提升，不得不佩服Apple 在 Final Cut Pro 上下了大功夫。较之 Final Cut Pro X，Premiere Pro 运行在新款 MacBook Pro 上的性能几乎没有提升，并且，Premiere Pro 所套用的剪辑逻辑依旧是与Final Cut Pro 7 相同的老式 Timeline 轨道。
 
-&emsp;&emsp;顺带一提，若是将两款剪辑软件的对比放到 MacBook（12-inch，2016）上，Final Cut Pro X 的轻度使用在可以接受的范围内，在 YouTube 上甚至有人用它处理 4K 视频，而这一切若是在运行 Premiere Pro 的场景下就不可想象了。
+&emsp;&emsp;顺带一提，若是将两款剪辑软件的对比放到 MacBook（12-inch，2016）上，Final Cut Pro X 轻度使用的表现在可以接受的范围内，在 YouTube 上甚至有人用它处理 4K 视频，而这一切若是在运行 Premiere Pro 的场景下就不可想象了。
 
 &emsp;&emsp;期待在新时代背景下（后 PC 时代），Apple 能够充分发挥其软硬结合的优势，针对专业非线性编辑用户的意见，加入自身对非线性编辑未来的思考，面向未来的非线性编辑场景，使 Final Cut Pro X 更加优秀，使非线性编辑软件与非线性编辑本身变得更加便捷高效。
 

@@ -20,17 +20,17 @@ ffmpeg -f avfoundation -list_devices true -i ""
 ### 2. Rec Screen
 > 在第一步的基础上，使用 FFmpeg 选择需要的输入设备进行录制
 
-- e.g. 1
+- e.g.
 
 	```
-ffmpeg -y -f avfoundation -i 1:3 -framerate 30 -c:v libx264 -r 60 -pix_fmt uyvy422 -preset 0 -crf 19 -c:a aac -b:a 192k "$INPUT $(date "+%Y-%m-%d %H-%M-%S").mp4"
+	ffmpeg -y -f avfoundation \
+	-i 1:3 -framerate 30 \
+	-c:v libx264 -r 30 -pix_fmt uyvy422 \
+	-preset slow -crf 19 \
+	-c:a aac -b:a 192k \
+	"$INPUT $(date "+%Y-%m-%d %H-%M-%S").mp4"
 	```
 
-- e.g. 2
-
-	```
-ffmpeg -y -f avfoundation -i 2:3 -framerate 30 -c:v libx264 -r 60 -pix_fmt yuv420p -preset 0 -crf 19 -c:a aac -b:a 192k "$INPUT $(date "+%Y-%m-%d %H-%M-%S").mp4" 
-	```
 
 ### * Rec Terminal
 > 另一种办法是录制终端
@@ -38,7 +38,7 @@ ffmpeg -y -f avfoundation -i 2:3 -framerate 30 -c:v libx264 -r 60 -pix_fmt yuv42
 - e.g.
 
 	```
-ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg
+	ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg
 	```
 
 
