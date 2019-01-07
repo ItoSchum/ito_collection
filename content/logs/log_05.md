@@ -86,6 +86,8 @@ done
 
 ```
 # Packup the images and encapsulate
+# Crop 为裁剪命令，
+# 例子中为裁剪分辨率为 2458*1296，从视频左上角 (x,y)=(16,16) 处开始裁剪
 ffmpeg -threads $thread_amount -start_number 1 \
 -i %07d-full.png \
 -i "$RAW_INPUT" \
@@ -95,7 +97,10 @@ ffmpeg -threads $thread_amount -start_number 1 \
 -vf "crop=2458:1296:16:16" \
 -map 0:v:0 -map 1:a:0 output_yuv420.mp4
 
+# Packup 和 Scale&Pad 步骤可写为一个步骤，避免二次编码，此处为方便展示 -vf 分开写
 # Scale and Pad
+# Scale 此处写为按比例缩放到 1080P，在不满足目标分辨率的情况下，降低分辨率
+# Pad 为视频填充黑色底（可不添加，视频分辨率即为 1920*width，width < 1080）
 INPUT=output_yuv420.mp4
 OUTPUT=output_scaled.mp4
 
