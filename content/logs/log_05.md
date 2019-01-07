@@ -43,7 +43,7 @@ ffmpeg -y -f avfoundation \
 此方法主要针对 CPU 性能不足的情况（会在录制时掉帧），通过对视频内容的逐帧转换来完成
 
 ### 0. Requirement
-- ffmpeg
+- FFmpeg
 - img2txt
 - webkit2png
 
@@ -66,9 +66,10 @@ for ascii in *.jpg; do
 done
 ```
 
-- "-W 128" means 128 ASCII columns
-- "-H 36" means 36 rows
-- "-x 3 -y 5" means font size 3x5
+- "-W 128" 表示 128 列 ASCII 字符
+- "-H 36" 表示 36 行 ASCII 字符
+- "-x 3 -y 5" 表示每个字符使用 3x5 像素
+
 
 ### 3. HTML to PNG via `webkit2png`
 通过 webkit2png 完成对 HTML 到 PNG 的逐帧转换
