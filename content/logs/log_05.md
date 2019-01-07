@@ -82,7 +82,11 @@ done
 ### 4. PNG to Video via `ffmpeg`
 最后再次使用 FFmpeg，完成对图片的重新封装，导出成视频
 
-可以先用 convert 将 PNG 图片先转换为 JPG 图片
+> 有关 FFmpeg 的命令:<br>
+> -vf crop 可参考: <https://ffmpeg.org/ffmpeg-all.html#crop><br>
+> -vf scale 可参考: <https://ffmpeg.org/ffmpeg-all.html#scale> 或 <https://trac.ffmpeg.org/wiki/Scaling><br>
+> -vf pad 可参考: <https://ffmpeg.org/ffmpeg-all.html#pad-1><br>
+
 
 ```
 # Packup the images and encapsulate
