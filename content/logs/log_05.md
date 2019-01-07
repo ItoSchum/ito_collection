@@ -128,9 +128,10 @@ echo $DISPLAY
 DISPLAY=/private/tmp/com.apple.launchd.RTIBTlQGVu/org.macosforge.xquartz:0
 ```
 
-- 输出到 X11 时，也可以限定输出窗口大小：
+- 输出到 X11 时，也可以设定输出的字符矩阵大小：
 
 ```
+# e.g. 显示 240 行 * 68 列字符
 export CACA_GEOMETRY=240x68
 mpv -vo caca $INPUT
 ```
