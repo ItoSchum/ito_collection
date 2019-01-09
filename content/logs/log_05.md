@@ -152,10 +152,7 @@ mpv -vo caca $INPUT
 export DISPLAY=
 ```
 
-
-
 ## Demo
-> 因为视频网站码率限制，被视频网站二压后，视频欠码，较模糊
 
 - Evangelion OP 
 	- YouTube: <https://www.youtube.com/watch?v=6QspMamFR9U&list=PLOWxt7icmzKwRIqAnzFNOwedE3PVvKS7B>
