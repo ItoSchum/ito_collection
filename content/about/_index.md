@@ -4,6 +4,6 @@ description: "Ito Schum"
 featured_image: '/images/Miku_2B_Remix.png'
 ---
 
-student HDU  
+student RPI  
 
-Zhihu: <https://zhuanlan.zhihu.com/ItoSchum>
+Email: ito@public.itoschum.me
