@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: "Ito Schum"
-featured_image: '/images/Miku_2B_Remix.png'
+featured_image: '/images/senbonsakura.jpg'
 ---
 
 student RPI  
