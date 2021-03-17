@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Ito Collection </title>
+    <title>Ito Collection  | CloudKit Keychain Database&#39;s Crash Problem And Recovering Solution</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -28,25 +28,43 @@
 
     
 
-    <meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="Stay hungry. Stay foolish." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://itoschum.me/404.html" />
+    <meta property="og:title" content="CloudKit Keychain Database&#39;s Crash Problem And Recovering Solution" />
+<meta property="og:description" content="现象描述  包括但不限于以下表现
+ 1. 异常流量  iOS 出现大量异常流量，如果是在 Cellular 环境下，表现为 Setting &gt; Cellular 中，Cellular Data 栏目出现大量的 System Service 流量，表现在 Documents &amp; Sync 栏目中，如图。   若安装了网络代理软件如 Surge，可发现异常流量主要是在与 icloud-content.com 通信产生的 HTTPS 下行流量，如图。  2. 设备运行异常且大量发热  设备可能会出现极其严重的卡顿，以至于进行难以操作，同时大量发热。  3. 大量第三方应用无法打开  大量第三方应用可能会出现无法打开的情况，具体表现为：在 Splash Screen 卡顿，直至 10 秒后被系统强制退出的现象。   目前发现「腾讯系」与「阿里系」应用似乎影响较小，可能 QQ、WeChat、AliPay 等应用仍然可以打开
+ 4. iCloud Keychain 数据库大小异常  在 Mac 的 ~/Library/Keychains/[UUID]/keychain-2.db 可见 keychain-2.db 大小异常，可能为数百兆字节甚至超过 1 吉字节（正常大小应为几十兆字节）。 使用 Sqlite 或相关 Sqlite 的 GUI 软件可见 keychain-2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://itoschum.me/logs/log_04/" />
+<meta property="article:published_time" content="2018-10-19T05:44:00+08:00" />
+<meta property="article:modified_time" content="2018-10-19T05:44:00+08:00" />
+<meta itemprop="name" content="CloudKit Keychain Database&#39;s Crash Problem And Recovering Solution">
+<meta itemprop="description" content="现象描述  包括但不限于以下表现
+ 1. 异常流量  iOS 出现大量异常流量，如果是在 Cellular 环境下，表现为 Setting &gt; Cellular 中，Cellular Data 栏目出现大量的 System Service 流量，表现在 Documents &amp; Sync 栏目中，如图。   若安装了网络代理软件如 Surge，可发现异常流量主要是在与 icloud-content.com 通信产生的 HTTPS 下行流量，如图。  2. 设备运行异常且大量发热  设备可能会出现极其严重的卡顿，以至于进行难以操作，同时大量发热。  3. 大量第三方应用无法打开  大量第三方应用可能会出现无法打开的情况，具体表现为：在 Splash Screen 卡顿，直至 10 秒后被系统强制退出的现象。   目前发现「腾讯系」与「阿里系」应用似乎影响较小，可能 QQ、WeChat、AliPay 等应用仍然可以打开
+ 4. iCloud Keychain 数据库大小异常  在 Mac 的 ~/Library/Keychains/[UUID]/keychain-2.db 可见 keychain-2.db 大小异常，可能为数百兆字节甚至超过 1 吉字节（正常大小应为几十兆字节）。 使用 Sqlite 或相关 Sqlite 的 GUI 软件可见 keychain-2.">
+<meta itemprop="datePublished" content="2018-10-19T05:44:00+08:00" />
+<meta itemprop="dateModified" content="2018-10-19T05:44:00+08:00" />
+<meta itemprop="wordCount" content="235">
 
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content="Stay hungry. Stay foolish.">
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content="Stay hungry. Stay foolish."/>
+<meta name="twitter:title" content="CloudKit Keychain Database&#39;s Crash Problem And Recovering Solution"/>
+<meta name="twitter:description" content="现象描述  包括但不限于以下表现
+ 1. 异常流量  iOS 出现大量异常流量，如果是在 Cellular 环境下，表现为 Setting &gt; Cellular 中，Cellular Data 栏目出现大量的 System Service 流量，表现在 Documents &amp; Sync 栏目中，如图。   若安装了网络代理软件如 Surge，可发现异常流量主要是在与 icloud-content.com 通信产生的 HTTPS 下行流量，如图。  2. 设备运行异常且大量发热  设备可能会出现极其严重的卡顿，以至于进行难以操作，同时大量发热。  3. 大量第三方应用无法打开  大量第三方应用可能会出现无法打开的情况，具体表现为：在 Splash Screen 卡顿，直至 10 秒后被系统强制退出的现象。   目前发现「腾讯系」与「阿里系」应用似乎影响较小，可能 QQ、WeChat、AliPay 等应用仍然可以打开
+ 4. iCloud Keychain 数据库大小异常  在 Mac 的 ~/Library/Keychains/[UUID]/keychain-2.db 可见 keychain-2.db 大小异常，可能为数百兆字节甚至超过 1 吉字节（正常大小应为几十兆字节）。 使用 Sqlite 或相关 Sqlite 的 GUI 软件可见 keychain-2."/>
 
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
     
+   
+  
 
-  <header>
-    <div class="bg-black">
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://itoschum.me/images/log_04/CKKS_crash_00.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="https://itoschum.me" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -118,17 +136,140 @@
   </div>
 </nav>
 
+      <div class="tc-l pv6 ph3 ph4-ns">
+        <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">CloudKit Keychain Database&#39;s Crash Problem And Recovering Solution</h1>
+        
+      </div>
     </div>
   </header>
 
 
+
     <main class="pb7" role="main">
       
-    <article class="center cf pv5 measure-wide-l">
-      <h1>
-        This is not the page you were looking for
-      </h1>
-    </article>
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        LOGS
+      </p>
+      <h1 class="f1 athelas mb1">CloudKit Keychain Database&#39;s Crash Problem And Recovering Solution</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2018-10-19T05:44:00&#43;08:00">October 19, 2018</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="现象描述">现象描述</h2>
+<blockquote>
+<p>包括但不限于以下表现</p>
+</blockquote>
+<h3 id="1-异常流量">1. 异常流量</h3>
+<ul>
+<li>iOS 出现大量异常流量，如果是在 Cellular 环境下，表现为 Setting &gt; Cellular 中，Cellular Data 栏目出现大量的 System Service 流量，表现在 Documents &amp; Sync 栏目中，如图。</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>若安装了网络代理软件如 Surge，可发现异常流量主要是在与 <code>icloud-content.com</code> 通信产生的 HTTPS 下行流量，如图。</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="2-设备运行异常且大量发热">2. 设备运行异常且大量发热</h3>
+<ul>
+<li>设备可能会出现极其严重的卡顿，以至于进行难以操作，同时大量发热。</li>
+</ul>
+<h3 id="3-大量第三方应用无法打开">3. 大量第三方应用无法打开</h3>
+<ul>
+<li>大量第三方应用可能会出现无法打开的情况，具体表现为：在 Splash Screen 卡顿，直至 10 秒后被系统强制退出的现象。</li>
+</ul>
+<blockquote>
+<p>目前发现「腾讯系」与「阿里系」应用似乎影响较小，可能 QQ、WeChat、AliPay 等应用仍然可以打开</p>
+</blockquote>
+<h3 id="4-icloud-keychain-数据库大小异常">4. iCloud Keychain 数据库大小异常</h3>
+<ul>
+<li>在 Mac 的 <code>~/Library/Keychains/[UUID]/keychain-2.db</code> 可见 <code>keychain-2.db</code> 大小异常，可能为数百兆字节甚至超过 1 吉字节（正常大小应为几十兆字节）。</li>
+<li>使用 Sqlite 或相关 Sqlite 的 GUI 软件可见 <code>keychain-2.db</code> 中表 <code>ckmirror</code> 的数据项可能多达近 30000，正常情况应为几千条，正常情况如图（图为本人恢复后的截图）。</li>
+</ul>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>更详细的现象描述与分析可参考：<a href="https://blog.nyan.im/posts/3467.html">iOS异常流量消耗及大范围应用闪退问题的分析</a></p>
+</blockquote>
+<h2 id="解决方案">解决方案</h2>
+<blockquote>
+<p>本人测试有效的方案，但无法考证其通用性，也无法考证其中做法是否有冗余操作</p>
+</blockquote>
+<blockquote>
+<p>虽然之前参考 <a href="https://blog.nyan.im/posts/3467.html">iOS异常流量消耗及大范围应用闪退问题的分析</a> 备份了 Health 数据，本人在使用本方案恢复 CloudKit 后， Health 数据并未出现丢失，但仍然建议先对 Health 数据进行备份</p>
+</blockquote>
+<blockquote>
+<p>Health 数据备份参考：<a href="https://sspai.com/post/42135">想要分析或备份 iPhone 「健康」应用数据？教你 3 种方法将其导出</a></p>
+</blockquote>
+<ol>
+<li>首先，确认在 Mac 端的 <code>~/Library/Keychains/[UUID]/keychain-2.db</code> 查看 <code>keychain-2.db</code> 大小是否异常，可用命令 <code>ls -ahl | sort -k5 -hr</code> 查看该目录下各项目大小</li>
+<li>若发现数据库大小有问题，先运行 <code>/usr/sbin/ckksctl status</code> 保证自己的各项服务都处于 <code>logged in</code> 状态，否则以下操作可能无效（<code>logged in</code> 状态如图）<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --></li>
+</ol>
+<!-- raw HTML omitted -->
+<ol start="3">
+<li>确认自己为 <code>logged in</code> 状态后，可使用命令 <code>/usr/sbin/ckksctl reset</code> 重置本地数据</li>
+<li>再之后用命令 <code>/usr/sbin/ckksctl reset-cloudkit</code> 重置 CloudKit 数据</li>
+<li>登出所有受影响设备的 iCloud</li>
+<li>登入一台 Mac 设备，重新登入 iCloud，并运行命令 <code>/usr/sbin/ckksctl reset-cloudkit</code> 重置 CloudKit 数据</li>
+<li>之后再陆续将其他设备的 iCloud 登入，此时 <code>keychain-2.db</code> 可能会由最初的 10MB 或更小增大，但基本维持在几十兆字节左右。</li>
+</ol>
+<ul>
+<li>注 1：本人最初先恢复了一台 Mac，之后再按此做法针对另一台 Mac 进行操作，结果数据库还是膨胀到了超过 600MB 的大小，于是之后采用了以上方法（本人猜测是本地的错误数据可能会被自动同步到 CloudKit）。</li>
+<li>注 2：若某台 iOS 设备出现 AirPods 配对困难，那么可能需要 Erase 这台设备再登入 iCloud（可以 Restore from backup / Set as New），不然在使用一段时间后（约一周内）出现数据库大小再次反弹的情况。</li>
+<li>最后附上恢复前后的文件大小对比图</li>
+</ul>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Command Reference:</p>
+<p><code>/usr/sbin/ckksctl status</code>: Report status on CKKS views
+<code>/usr/sbin/ckksctl reset</code>: All local data will be wiped, and data refetched from CloudKit<!-- raw HTML omitted -->
+<code>/usr/sbin/ckksctl reset-cloudkit</code>: All data in CloudKit will be removed and replaced with what&rsquo;s local<!-- raw HTML omitted --></p>
+</blockquote>
+<h2 id="reference">Reference</h2>
+<blockquote>
+<p>以下为本人最初找到的有关此问题的分析与解决方案的讨论<!-- raw HTML omitted -->
+在此表示感谢</p>
+</blockquote>
+<ul>
+<li>目前最详细的问题分析汇总：<a href="https://blog.nyan.im/posts/3467.html">iOS异常流量消耗及大范围应用闪退问题的分析</a></li>
+<li>MacRumors 的相关讨论：<a href="https://forums.macrumors.com/threads/excessive-data-consumption-for-documents-sync-and-constantly-high-cpu-load-on-iphone-and-ipad.2127349/">Excessive data consumption for &ldquo;Documents &amp; Sync&rdquo; and constantly high CPU load on iPhone and iPad</a></li>
+<li>CloudKit 命令参考：<a href="http://krypted.com/cloud/reset-connections-applepay-health-ckksctl/">Reset Connections To ApplePay and Health With ckksctl</a></li>
+<li>Health 数据备份参考：<a href="https://sspai.com/post/42135">想要分析或备份 iPhone 「健康」应用数据？教你 3 种方法将其导出</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://itoschum-me.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
 
     </main>
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">

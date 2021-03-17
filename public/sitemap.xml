@@ -1,23 +1,106 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://itoschum.me/categories/</loc>
+    <loc>https://itoschum.me/</loc>
+    <lastmod>2021-03-17T14:32:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0</priority>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://itoschum.me/</loc>
+    <loc>https://itoschum.me/logs/log_06/</loc>
+    <lastmod>2021-03-17T14:32:00-04:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0</priority>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/logs/log_05/</loc>
+    <lastmod>2018-12-20T15:54:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/logs/log_04/</loc>
+    <lastmod>2018-10-19T05:44:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/logs/log_03/</loc>
+    <lastmod>2017-07-26T01:34:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/essays/essay_02/</loc>
+    <lastmod>2017-05-06T01:05:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/logs/log_02/</loc>
+    <lastmod>2017-03-26T21:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/essays/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/logs/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/essays/essay_01/</loc>
+    <lastmod>2017-02-28T23:39:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/logs/log_01/</loc>
+    <lastmod>2017-02-28T23:20:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://itoschum.me/contact/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://itoschum.me/tags/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0</priority>
+    <priority>0.5</priority>
   </url>
   
 </urlset>

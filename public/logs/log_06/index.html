@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Ito Collection </title>
+    <title>Ito Collection  | Visual Studio Code C/C&#43;&#43; Extension Setup on M1 Mac</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -28,25 +28,49 @@
 
     
 
-    <meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="Stay hungry. Stay foolish." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://itoschum.me/404.html" />
+    <meta property="og:title" content="Visual Studio Code C/C&#43;&#43; Extension Setup on M1 Mac" />
+<meta property="og:description" content="Prerequisites   Visual Studio Code extension ms-vscode.cpptools
+  Xcode Command-line Tools / Xcode IDE
+ To install Xcode Command-line Tools: xcode-select --install To install Xcode IDE: mas install Xcode    Test Environment   macOS 11.2.3
+$ uname -v Darwin Kernel Version 20.3.0: Thu Jan 21 00:06:51 PST 2021; root:xnu-7195.81.3~1/RELEASE_ARM64_T8101    Xcode 12.4 (12D4e)
+$ clang --version Apple clang version 12.0.0 (clang-1200.0.32.29) Target: arm64-apple-darwin20.3.0 Thread model: posix InstalledDir: /Applications/Xcode." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://itoschum.me/logs/log_06/" />
+<meta property="article:published_time" content="2021-03-17T14:32:00-04:00" />
+<meta property="article:modified_time" content="2021-03-17T14:32:00-04:00" />
+<meta itemprop="name" content="Visual Studio Code C/C&#43;&#43; Extension Setup on M1 Mac">
+<meta itemprop="description" content="Prerequisites   Visual Studio Code extension ms-vscode.cpptools
+  Xcode Command-line Tools / Xcode IDE
+ To install Xcode Command-line Tools: xcode-select --install To install Xcode IDE: mas install Xcode    Test Environment   macOS 11.2.3
+$ uname -v Darwin Kernel Version 20.3.0: Thu Jan 21 00:06:51 PST 2021; root:xnu-7195.81.3~1/RELEASE_ARM64_T8101    Xcode 12.4 (12D4e)
+$ clang --version Apple clang version 12.0.0 (clang-1200.0.32.29) Target: arm64-apple-darwin20.3.0 Thread model: posix InstalledDir: /Applications/Xcode.">
+<meta itemprop="datePublished" content="2021-03-17T14:32:00-04:00" />
+<meta itemprop="dateModified" content="2021-03-17T14:32:00-04:00" />
+<meta itemprop="wordCount" content="288">
 
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content="Stay hungry. Stay foolish.">
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content="Stay hungry. Stay foolish."/>
+<meta name="twitter:title" content="Visual Studio Code C/C&#43;&#43; Extension Setup on M1 Mac"/>
+<meta name="twitter:description" content="Prerequisites   Visual Studio Code extension ms-vscode.cpptools
+  Xcode Command-line Tools / Xcode IDE
+ To install Xcode Command-line Tools: xcode-select --install To install Xcode IDE: mas install Xcode    Test Environment   macOS 11.2.3
+$ uname -v Darwin Kernel Version 20.3.0: Thu Jan 21 00:06:51 PST 2021; root:xnu-7195.81.3~1/RELEASE_ARM64_T8101    Xcode 12.4 (12D4e)
+$ clang --version Apple clang version 12.0.0 (clang-1200.0.32.29) Target: arm64-apple-darwin20.3.0 Thread model: posix InstalledDir: /Applications/Xcode."/>
 
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
     
+   
+  
 
-  <header>
-    <div class="bg-black">
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://itoschum.me/images/log_06/m1-chip.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="https://itoschum.me" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -118,17 +142,225 @@
   </div>
 </nav>
 
+      <div class="tc-l pv6 ph3 ph4-ns">
+        <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Visual Studio Code C/C&#43;&#43; Extension Setup on M1 Mac</h1>
+        
+      </div>
     </div>
   </header>
 
 
+
     <main class="pb7" role="main">
       
-    <article class="center cf pv5 measure-wide-l">
-      <h1>
-        This is not the page you were looking for
-      </h1>
-    </article>
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        LOGS
+      </p>
+      <h1 class="f1 athelas mb1">Visual Studio Code C/C&#43;&#43; Extension Setup on M1 Mac</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-03-17T14:32:00-04:00">March 17, 2021</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>
+<p>Visual Studio Code extension <code>ms-vscode.cpptools</code></p>
+</li>
+<li>
+<p>Xcode Command-line Tools / Xcode IDE</p>
+<ul>
+<li>To install Xcode Command-line Tools: <code>xcode-select --install</code></li>
+<li>To install Xcode IDE: <code>mas install Xcode</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="test-environment">Test Environment</h3>
+<ul>
+<li>
+<p>macOS 11.2.3</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ uname -v
+Darwin Kernel Version 20.3.0: Thu Jan <span style="color:#ae81ff">21</span> 00:06:51 PST 2021; 
+root:xnu-7195.81.3~1/RELEASE_ARM64_T8101
+</code></pre></div><pre><code>   
+</code></pre></li>
+<li>
+<p>Xcode 12.4 (12D4e)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ clang --version
+Apple clang version 12.0.0 <span style="color:#f92672">(</span>clang-1200.0.32.29<span style="color:#f92672">)</span>
+Target: arm64-apple-darwin20.3.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+</code></pre></div><pre><code>   
+</code></pre></li>
+<li>
+<p>Visual Studio Code 1.54.3 (Universal)</p>
+<ul>
+<li>Commit: 2b9aebd5354a3629c3aba0a5f5df49f43d6689f8</li>
+<li>Extension: ms-vscode.cpptools v1.2.2</li>
+</ul>
+</li>
+</ul>
+<h2 id="setup">Setup</h2>
+<p>Modify the <code>settings.json</code> in Visual Studio Code as shown below</p>
+<h3 id="compiler-path">Compiler path</h3>
+<ul>
+<li>
+<p>For Xcode Command-line Tools:</p>
+<pre><code>/Library/Developer/CommandLineTools/usr/bin
+</code></pre><pre><code></code></pre></li>
+<li>
+<p>For Xcode IDE:</p>
+<pre><code>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/
+</code></pre><pre><code>   
+</code></pre></li>
+</ul>
+<h3 id="mac-framwork-path">Mac framwork path</h3>
+<blockquote>
+<p>The system header files</p>
+</blockquote>
+<ul>
+<li>
+<p>For Xcode Command-line Tools:</p>
+<pre><code>/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+</code></pre><pre><code></code></pre></li>
+<li>
+<p>For Xcode IDE:</p>
+<pre><code>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
+</code></pre><pre><code>
+</code></pre></li>
+</ul>
+<h3 id="include-path">Include path</h3>
+<ul>
+<li>
+<p>For Xcode Command-line Tools:</p>
+<pre><code>/usr/local/include/**
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/**
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/**
+/Library/Developer/CommandLineTools/usr/include/**
+</code></pre><pre><code>   
+</code></pre></li>
+<li>
+<p>For Xcode IDE:</p>
+<pre><code>/usr/local/include/**
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/**
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/**
+/Applications/Xcode.app/Contents/Developer/usr/lib/llvm-gcc/4.2.1/include/**
+</code></pre><pre><code>
+</code></pre></li>
+</ul>
+<h2 id="example">Example</h2>
+<p>The version of <code>clang</code> may vary, using <code>clang --version</code> to check the current version</p>
+<ul>
+<li>
+<p>If only Xcode Command-line Tools is installed</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#e6db74">&#34;C_Cpp.default.systemIncludePath&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
+  <span style="color:#e6db74">&#34;/usr/local/include/**&#34;</span>,
+  <span style="color:#e6db74">&#34;/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/**&#34;</span>,
+  <span style="color:#e6db74">&#34;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/**&#34;</span>,
+  <span style="color:#e6db74">&#34;/Library/Developer/CommandLineTools/usr/include/**&#34;</span>,
+  <span style="color:#e6db74">&#34;${workspaceFolder}/**&#34;</span>
+]<span style="color:#960050;background-color:#1e0010">,</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.macFrameworkPath&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
+  <span style="color:#e6db74">&#34;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks&#34;</span>
+]<span style="color:#960050;background-color:#1e0010">,</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.compilerPath&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;/usr/bin/clang&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.intelliSenseMode&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;macos-clang-arm64&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.cStandard&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;c11&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>     <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">or</span> <span style="color:#960050;background-color:#1e0010">any</span> <span style="color:#960050;background-color:#1e0010">version</span> <span style="color:#960050;background-color:#1e0010">preferred</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.cppStandard&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;c++11&#34;</span>  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">or</span> <span style="color:#960050;background-color:#1e0010">any</span> <span style="color:#960050;background-color:#1e0010">version</span> <span style="color:#960050;background-color:#1e0010">preferred</span>
+</code></pre></div><pre><code>
+</code></pre></li>
+<li>
+<p>If Xcode IDE is installed</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#e6db74">&#34;C_Cpp.default.systemIncludePath&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
+  <span style="color:#e6db74">&#34;/usr/local/include/**&#34;</span>,
+  <span style="color:#e6db74">&#34;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/**&#34;</span>,
+  <span style="color:#e6db74">&#34;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/**&#34;</span>,
+  <span style="color:#e6db74">&#34;/Applications/Xcode.app/Contents/Developer/usr/lib/llvm-gcc/4.2.1/include/**&#34;</span>,
+  <span style="color:#e6db74">&#34;${workspaceFolder}/**&#34;</span>
+]<span style="color:#960050;background-color:#1e0010">,</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.macFrameworkPath&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
+  <span style="color:#e6db74">&#34;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks&#34;</span>
+]<span style="color:#960050;background-color:#1e0010">,</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.compilerPath&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;/usr/bin/clang&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.intelliSenseMode&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;macos-clang-arm64&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.cStandard&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;c11&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>     <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">or</span> <span style="color:#960050;background-color:#1e0010">any</span> <span style="color:#960050;background-color:#1e0010">version</span> <span style="color:#960050;background-color:#1e0010">preferred</span>
+<span style="color:#e6db74">&#34;C_Cpp.default.cppStandard&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;c++11&#34;</span>  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">or</span> <span style="color:#960050;background-color:#1e0010">any</span> <span style="color:#960050;background-color:#1e0010">version</span> <span style="color:#960050;background-color:#1e0010">preferred</span>
+</code></pre></div><pre><code>
+</code></pre></li>
+</ul>
+<h2 id="other">Other</h2>
+<p>All <code>include</code> directories found under <code>Xcode.app/Contents/Developer/</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ find . -name <span style="color:#e6db74">&#34;include&#34;</span>
+./usr/lib/llvm-gcc/4.2.1/include
+./usr/share/xcs/CouchDB/lib/couchdb/erlang/lib/couch-1.7.1/include
+./usr/share/xcs/CouchDB/lib/couchdb/erlang/lib/couch_mrview-0.1/include
+./usr/share/xcs/CouchDB/lib/couchdb/erlang/lib/couch_replicator-0.1/include
+./Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS.sdk/usr/include
+./Platforms/AppleTVOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/tvOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/GPUCompiler.framework/Libraries/lib/clang/31001.50/include
+./Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include
+./Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/GPUCompiler.framework/Libraries/lib/clang/31001.50/include
+./Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/usr/include
+./Platforms/WatchOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/watchOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/GPUCompiler.framework/Libraries/lib/clang/31001.50/include
+./Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+./Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include
+./Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include
+./Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenCL.framework/Versions/A/lib/clang/3.2/include
+./Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Python.framework/Versions/2.7/include
+./Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/core/include
+./Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/numarray/include
+./Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC/pyobjc_core-2.5.1-py2.7.egg-info/include
+./Platforms/MacOSX.platform/Developer/SDKs/DriverKit20.2.sdk/System/DriverKit/usr/include
+./Platforms/WatchSimulator.platform/Developer/SDKs/WatchSimulator.sdk/usr/include
+./Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator.sdk/usr/include
+./Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/include
+./Library/Frameworks/Python3.framework/Versions/3.8/include
+./Toolchains/XcodeDefault.xctoolchain/usr/metal/macos/lib/clang/31001.160/include
+./Toolchains/XcodeDefault.xctoolchain/usr/metal/ios/lib/clang/31001.50/include
+./Toolchains/XcodeDefault.xctoolchain/usr/include
+./Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include
+./Toolchains/XcodeDefault.xctoolchain/usr/lib/tapi/12.0.0/include
+</code></pre></div><h2 id="reference">Reference</h2>
+<ul>
+<li>Blog: <a href="https://wilsonmar.github.io/xcode/">Xcode install (on MacOS)</a></li>
+<li>git memory: <a href="https://www.gitmemory.com/issue/microsoft/vscode-cmake-tools/1583/739054834">clang-arm intelliSenseMode selected instead of clang-arm64 on Apple Silicon machine</a></li>
+<li>Microsoft Visual Stuio Code Tutorial: <a href="https://code.visualstudio.com/docs/cpp/config-clang-mac">Using Clang in Visual Studio Code</a></li>
+<li>Github Gist: <a href="https://gist.github.com/yamaya/2924292">yamaya / xcode-clang-vers</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://itoschum-me.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
 
     </main>
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">

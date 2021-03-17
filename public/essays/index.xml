@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Essays on Ito Collection</title>
+    <link>https://itoschum.me/essays/</link>
+    <description>Recent content in Essays on Ito Collection</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://itoschum.me/essays/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从 5s 到 SE</title>
+      <link>https://itoschum.me/essays/essay_02/</link>
+      <pubDate>Sat, 06 May 2017 01:05:00 +0800</pubDate>
+      
+      <guid>https://itoschum.me/essays/essay_02/</guid>
+      <description>今日收到了网购的美版二手 iPhone SE (A1662, 64GB)，而陪伴了我 3 年多的 iPhone 5s (A1528, 16GB) 终于要退居二线了。
+ 在面对一只性能提升如此巨大的 4-inch iPhone，我的内心是震撼的，如同当年我拆开人生中第一只 iPhone（即这只即将退居二线的 iPhone 5s）的包装时一样。
+ 当时我从未想过，我居然能够掌控这样一只 CPU、GPU 性能约为 iPod touch 5th gen. 4 倍的机器，即使它的存储容量仅有 16GB。
+(iPod touch 5th gen. SoC 性能参照图中 iPhone 4S)
+ 用着这样一台机器，在 iOS 平台上，我开始了我的非线性剪辑启蒙 —— iMovie。从高中时期到现在，我一直认为 iMovie 是 iOS 平台上最出色的剪辑软件（没有之一），也是靠着 iMovie，我，一个普通的高中生能够在移动设备上完成许多启蒙的剪辑作品。可能正是因为这台 iPhone 5s，正因为 iMovie，让我最后走入了 Final Cut Pro X 的大门。
+ 毫不夸张地说，这一台 iPhone 5s 几乎就是我很长一段时间内，移动计算的中心。
+ 时光飞逝，3 年多过去（准确地说，3 年中因为电池损耗问题换过一次整机，因为屏幕老化问题单独更换过一次屏幕），iPhone 5s 渐渐地步履蹒跚了，我逐渐难以忍受打开 App 时漫长的等待，难以忍受它可怜的存储空间，难以忍受那不到半天的续航，甚至经常出现网络连接的问题（尤其是 Wi-Fi 与 蜂窝数据 切换时）。于是，我终于决定，让它退居二线，取而代之的便是今天收到的这台二手 iPhone SE。</description>
+    </item>
+    
+    <item>
+      <title>浅谈 Final Cut Pro 的前世今生</title>
+      <link>https://itoschum.me/essays/essay_01/</link>
+      <pubDate>Tue, 28 Feb 2017 23:39:00 +0800</pubDate>
+      
+      <guid>https://itoschum.me/essays/essay_01/</guid>
+      <description>Final Cut Pro 是 Apple 公司开发的一款面向专业视频非线性编辑的软件，这款软件对非线性编辑行业有着重大的影响。
+ 说起 Final Cut Pro 的诞生，不得不谈到 Final Cut Pro 的缔造者，同时也是 Premiere 缔造者的Randy Ubillos 。Randy Ubillos 在完成早期 Premiere 的开发后，他的团队被 Macromedia 雇佣，帮助开发一款基于 Apple 的 QuickTime 播放器的，相比 Premiere 更专业的非线性剪辑软件 KeyGrip。因为 KeyGrip 的开发部分基于 Microsoft 给予 Macromedia 的合作伙伴 Truevision 的许可，所以 Macromedia 无法发布 KeyGrip，不然，将为 Truevision 招来许可问题。
+ 另外 KeyGrip 于 1998 年更名为 Final Cut，希望将 Final Cut 出售，最终 Apple Computer（2010 年 WWDC 时，“Apple Computer” 正式更名为 “Apple”）买下了 Final Cut 的开发团队和软件，并继续开发。
+ 第一代 Final Cut Pro 在 1999 年推出，然而，在初代 Final Cut Pro 推出时，不仅当时的非线性编辑软件的龙头企业 AVID 对 Final Cut Pro 不屑一顾，大多专业剪辑师也并不认同这位“搅局者”。在他们眼中，Final Cut Pro 不过是花拳绣腿，无法与老牌的非线性编辑软件相提并论。</description>
+    </item>
+    
+  </channel>
+</rss>

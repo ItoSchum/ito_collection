@@ -11,32 +11,28 @@ featured_image: '/images/log_06/m1-chip.jpg'
 - Visual Studio Code extension `ms-vscode.cpptools`
 
 - Xcode Command-line Tools / Xcode IDE 
-	- To install Xcode Command-line Tools:
-		```
-		xcode-select --install
-		``` 		
-	- To install Xcode IDE:
-		```
-		mas install Xcode
-		```
+	- To install Xcode Command-line Tools: `xcode-select --install`
+	- To install Xcode IDE: `mas install Xcode`
 
 ### Test Environment
 - macOS 11.2.3
 
-	```
+	```Bash
 	$ uname -v
 	Darwin Kernel Version 20.3.0: Thu Jan 21 00:06:51 PST 2021; 
 	root:xnu-7195.81.3~1/RELEASE_ARM64_T8101
 	```
+	
 - Xcode 12.4 (12D4e)
 	
-	```
+	```Bash
 	$ clang --version
 	Apple clang version 12.0.0 (clang-1200.0.32.29)
 	Target: arm64-apple-darwin20.3.0
 	Thread model: posix
 	InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 	```
+	
 - Visual Studio Code 1.54.3 (Universal)
 	- Commit: 2b9aebd5354a3629c3aba0a5f5df49f43d6689f8
 	- Extension: ms-vscode.cpptools v1.2.2  

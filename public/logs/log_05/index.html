@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Ito Collection </title>
+    <title>Ito Collection  | Converting Video to ASCII via LibCACA</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -28,25 +28,49 @@
 
     
 
-    <meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="Stay hungry. Stay foolish." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://itoschum.me/404.html" />
+    <meta property="og:title" content="Converting Video to ASCII via LibCACA" />
+<meta property="og:description" content="Method 1: Screen Recording 在 CPU 性能足够的情况下，可以通过录制屏幕的方式来获得 LibCACA 输出的 ASCII 视频
+1. List Devices 列举出 AVFoundation 的输入设备
+ffmpeg -f avfoundation -list_devices true -i &quot;&quot; 2. Rec Screen 在第一步的基础上，使用 FFmpeg 选择需要的输入设备进行录制
+# e.g. ffmpeg -y -f avfoundation \ -i 1:3 -framerate 30 \ -c:v libx264 -r 30 -pix_fmt uyvy422 \ -preset slow -crf 19 \ -c:a aac -b:a 192k \ &quot;$INPUT $(date &quot;&#43;%Y-%m-%d %H-%M-%S&quot;).mp4&quot; * Rec Terminal 另一种办法是录制终端字符，在此使用现成的终端录制项目:
+ asciinema: https://asciinema.org/ ScreenShooter: https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://itoschum.me/logs/log_05/" />
+<meta property="article:published_time" content="2018-12-20T15:54:00+08:00" />
+<meta property="article:modified_time" content="2018-12-20T15:54:00+08:00" />
+<meta itemprop="name" content="Converting Video to ASCII via LibCACA">
+<meta itemprop="description" content="Method 1: Screen Recording 在 CPU 性能足够的情况下，可以通过录制屏幕的方式来获得 LibCACA 输出的 ASCII 视频
+1. List Devices 列举出 AVFoundation 的输入设备
+ffmpeg -f avfoundation -list_devices true -i &quot;&quot; 2. Rec Screen 在第一步的基础上，使用 FFmpeg 选择需要的输入设备进行录制
+# e.g. ffmpeg -y -f avfoundation \ -i 1:3 -framerate 30 \ -c:v libx264 -r 30 -pix_fmt uyvy422 \ -preset slow -crf 19 \ -c:a aac -b:a 192k \ &quot;$INPUT $(date &quot;&#43;%Y-%m-%d %H-%M-%S&quot;).mp4&quot; * Rec Terminal 另一种办法是录制终端字符，在此使用现成的终端录制项目:
+ asciinema: https://asciinema.org/ ScreenShooter: https://github.">
+<meta itemprop="datePublished" content="2018-12-20T15:54:00+08:00" />
+<meta itemprop="dateModified" content="2018-12-20T15:54:00+08:00" />
+<meta itemprop="wordCount" content="376">
 
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content="Stay hungry. Stay foolish.">
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content="Stay hungry. Stay foolish."/>
+<meta name="twitter:title" content="Converting Video to ASCII via LibCACA"/>
+<meta name="twitter:description" content="Method 1: Screen Recording 在 CPU 性能足够的情况下，可以通过录制屏幕的方式来获得 LibCACA 输出的 ASCII 视频
+1. List Devices 列举出 AVFoundation 的输入设备
+ffmpeg -f avfoundation -list_devices true -i &quot;&quot; 2. Rec Screen 在第一步的基础上，使用 FFmpeg 选择需要的输入设备进行录制
+# e.g. ffmpeg -y -f avfoundation \ -i 1:3 -framerate 30 \ -c:v libx264 -r 30 -pix_fmt uyvy422 \ -preset slow -crf 19 \ -c:a aac -b:a 192k \ &quot;$INPUT $(date &quot;&#43;%Y-%m-%d %H-%M-%S&quot;).mp4&quot; * Rec Terminal 另一种办法是录制终端字符，在此使用现成的终端录制项目:
+ asciinema: https://asciinema.org/ ScreenShooter: https://github."/>
 
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
     
+   
+  
 
-  <header>
-    <div class="bg-black">
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://itoschum.me/images/log_05/voCACA_00.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="https://itoschum.me" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -118,17 +142,181 @@
   </div>
 </nav>
 
+      <div class="tc-l pv6 ph3 ph4-ns">
+        <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Converting Video to ASCII via LibCACA</h1>
+        
+      </div>
     </div>
   </header>
 
 
+
     <main class="pb7" role="main">
       
-    <article class="center cf pv5 measure-wide-l">
-      <h1>
-        This is not the page you were looking for
-      </h1>
-    </article>
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        LOGS
+      </p>
+      <h1 class="f1 athelas mb1">Converting Video to ASCII via LibCACA</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2018-12-20T15:54:00&#43;08:00">December 20, 2018</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="method-1-screen-recording">Method 1: Screen Recording</h2>
+<p>在 CPU 性能足够的情况下，可以通过录制屏幕的方式来获得 LibCACA 输出的 ASCII 视频</p>
+<h3 id="1-list-devices">1. List Devices</h3>
+<p>列举出 AVFoundation 的输入设备</p>
+<pre><code>ffmpeg -f avfoundation -list_devices true -i &quot;&quot;
+</code></pre><h3 id="2-rec-screen">2. Rec Screen</h3>
+<p>在第一步的基础上，使用 FFmpeg 选择需要的输入设备进行录制</p>
+<pre><code># e.g.
+ffmpeg -y -f avfoundation \
+-i 1:3 -framerate 30 \
+-c:v libx264 -r 30 -pix_fmt uyvy422 \
+-preset slow -crf 19 \
+-c:a aac -b:a 192k \
+&quot;$INPUT $(date &quot;+%Y-%m-%d %H-%M-%S&quot;).mp4&quot;
+</code></pre><h3 id="-rec-terminal">* Rec Terminal</h3>
+<p>另一种办法是录制终端字符，在此使用现成的终端录制项目:</p>
+<ul>
+<li>asciinema: <a href="https://asciinema.org/">https://asciinema.org/</a></li>
+<li>ScreenShooter: <a href="https://github.com/Jamesits/ScreenShooter.git">https://github.com/Jamesits/ScreenShooter.git</a></li>
+</ul>
+<h2 id="method-2-format-converting">Method 2: Format Converting</h2>
+<blockquote>
+<p>Process: Video &ndash;&gt; JPG &ndash;&gt; HTML &ndash;&gt; JPG &ndash;&gt; Video</p>
+</blockquote>
+<p>此方法主要针对 CPU 性能不足的情况（会在录制时掉帧），通过对视频内容的逐帧转换来完成</p>
+<h3 id="0-requirement">0. Requirement</h3>
+<ul>
+<li>FFmpeg</li>
+<li>img2txt</li>
+<li>webkit2png</li>
+</ul>
+<h3 id="1-video-to-jpg-via-ffmpeg">1. Video to JPG via <code>ffmpeg</code></h3>
+<p>通过 FFmpeg 完成对视频的逐帧截取，截图格式为 JPG</p>
+<pre><code>ffmpeg -threads $thread_amount \
+-i &quot;$RAW_INPUT&quot; \
+-r $video_fps -s $video_resolution -f image2 \
+%07d.jpg
+</code></pre><h3 id="2-jpg-to-html-via-img2txt">2. JPG to HTML via <code>img2txt</code></h3>
+<p>通过 img2txt 逐帧完成视频的 ASCII 风格转换，存为 HTML</p>
+<pre><code>for ascii in *.jpg; do
+	img2txt -W 128 -H 36 -x 3 -y 5 $ascii -f html &gt; $(basename $ascii .jpg).html;
+done
+</code></pre><ul>
+<li>&ldquo;-W 128&rdquo; 表示 128 列 ASCII 字符</li>
+<li>&ldquo;-H 36&rdquo; 表示 36 行 ASCII 字符</li>
+<li>&ldquo;-x 3 -y 5&rdquo; 表示每个字符使用 3x5 像素</li>
+</ul>
+<h3 id="3-html-to-png-via-webkit2png">3. HTML to PNG via <code>webkit2png</code></h3>
+<p>通过 webkit2png 完成对 HTML 到 PNG 的逐帧转换</p>
+<pre><code>for LibCaca in *.html; do
+	webkit2png -F -o $(basename $LibCaca .html) $LibCaca;
+done
+</code></pre><h3 id="4-png-to-video-via-ffmpeg">4. PNG to Video via <code>ffmpeg</code></h3>
+<p>最后再次使用 FFmpeg，完成对图片的重新封装，导出成视频</p>
+<blockquote>
+<p>有关 FFmpeg 的命令:<!-- raw HTML omitted -->
+-vf crop 可参考: <a href="https://ffmpeg.org/ffmpeg-all.html#crop">https://ffmpeg.org/ffmpeg-all.html#crop</a><!-- raw HTML omitted -->
+-vf scale 可参考: <a href="https://ffmpeg.org/ffmpeg-all.html#scale">https://ffmpeg.org/ffmpeg-all.html#scale</a> 或 <a href="https://trac.ffmpeg.org/wiki/Scaling">https://trac.ffmpeg.org/wiki/Scaling</a><!-- raw HTML omitted -->
+-vf pad 可参考: <a href="https://ffmpeg.org/ffmpeg-all.html#pad-1">https://ffmpeg.org/ffmpeg-all.html#pad-1</a><!-- raw HTML omitted --></p>
+</blockquote>
+<pre><code># Packup the images and encapsulate
+# Crop 为裁剪命令，
+# 例子中为裁剪分辨率为 2458*1296，从视频左上角 (x,y)=(16,16) 处开始裁剪
+ffmpeg -threads $thread_amount -start_number 1 \
+-i %07d-full.png \
+-i &quot;$RAW_INPUT&quot; \
+-movflags +faststart \
+-c:v libx264 -pix_fmt yuv420p -crf 20 -r $video_fps \
+-preset slower -profile:v high -level 5.0 \
+-vf &quot;crop=2458:1296:16:16&quot; \
+-map 0:v:0 -map 1:a:0 output_yuv420.mp4
+
+# Packup 和 Scale&amp;Pad 步骤可写为一个步骤，避免二次编码，此处为方便展示 -vf 分开写
+# Scale and Pad
+# Scale 此处写为按比例缩放到 1080P，在不满足目标分辨率的情况下，降低分辨率
+# Pad 为视频填充黑色底（可不添加，视频分辨率即为 1920*width，width &lt; 1080）
+INPUT=output_yuv420.mp4
+OUTPUT=output_scaled.mp4
+
+ffmpeg -threads $thread_amount \
+-i $INPUT -c:a copy \
+-vf &quot;scale=1920:1080:force_original_aspect_ratio=decrease, pad=1920:1080:0:(1080-in_h)/2:black&quot; \
+$OUTPUT
+</code></pre><h3 id="automation-script">Automation Script</h3>
+<p>将上述步骤写成 Shell Script，并提供了几种输出模式</p>
+<p>Shell Script：<a href="https://github.com/ItoSchum/video_output_CACA">https://github.com/ItoSchum/video_output_CACA</a></p>
+<h2 id="other">Other</h2>
+<h3 id="1-screenshot-capturing">1. Screenshot Capturing</h3>
+<p>以下命令可用于截取视频中的一帧用于视频封面等</p>
+<pre><code>ffmpeg -ss 00:04:03 -i $INPUT -vframes 1 -f mjpeg sample.jpg
+</code></pre><h3 id="2-display-setting">2. <code>DISPLAY</code> Setting</h3>
+<p>在使用如<code>mpv --vo=caca</code> 命令时，有关在 XQuartz 的窗口或是在终端内输出视频的偏好设置</p>
+<ul>
+<li>如果希望使用 X11 作为输出：</li>
+</ul>
+<pre><code>echo $DISPLAY
+DISPLAY=/private/tmp/com.apple.launchd.RTIBTlQGVu/org.macosforge.xquartz:0
+</code></pre><ul>
+<li>输出到 X11 时，也可以设定输出的字符矩阵大小：</li>
+</ul>
+<pre><code># e.g. 显示 240 行 * 68 列字符
+export CACA_GEOMETRY=240x68
+mpv -vo caca $INPUT
+</code></pre><ul>
+<li>如果希望直接在终端内输出：</li>
+</ul>
+<pre><code>export DISPLAY=
+</code></pre><h2 id="demo">Demo</h2>
+<ul>
+<li>Evangelion OP
+<ul>
+<li>YouTube: <a href="https://www.youtube.com/watch?v=6QspMamFR9U&amp;list=PLOWxt7icmzKwRIqAnzFNOwedE3PVvKS7B">https://www.youtube.com/watch?v=6QspMamFR9U&amp;list=PLOWxt7icmzKwRIqAnzFNOwedE3PVvKS7B</a></li>
+<li>Bilibili：<a href="https://www.bilibili.com/video/av40204551">https://www.bilibili.com/video/av40204551</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<p>以下为本人最初找到的有关此问题的解决方案，在此表示感谢</p>
+<ul>
+<li><a href="http://stariocek.asuscomm.com/watch-ascii-libcaca.html">http://stariocek.asuscomm.com/watch-ascii-libcaca.html</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://itoschum-me.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
 
     </main>
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">

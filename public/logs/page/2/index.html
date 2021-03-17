@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Ito Collection </title>
+    <title>Ito Collection  | Logs</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,16 +27,19 @@
     
 
     
+      <link href="https://itoschum.me/logs/index.xml" rel="alternate" type="application/rss+xml" title="Ito Collection" />
+      <link href="https://itoschum.me/logs/index.xml" rel="feed" type="application/rss+xml" title="Ito Collection" />
+    
 
-    <meta property="og:title" content="404 Page not found" />
+    <meta property="og:title" content="Logs" />
 <meta property="og:description" content="Stay hungry. Stay foolish." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://itoschum.me/404.html" />
-
-<meta itemprop="name" content="404 Page not found">
+<meta property="og:url" content="https://itoschum.me/logs/" />
+<meta property="og:updated_time" content="2017-03-02T12:00:00-05:00" />
+<meta itemprop="name" content="Logs">
 <meta itemprop="description" content="Stay hungry. Stay foolish.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
+<meta name="twitter:title" content="Logs"/>
 <meta name="twitter:description" content="Stay hungry. Stay foolish."/>
 
   </head>
@@ -45,8 +48,10 @@
 
     
 
-  <header>
-    <div class="bg-black">
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://itoschum.me/images/background/senbonsakura.jpg');">
+    <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="https://itoschum.me" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -118,17 +123,106 @@
   </div>
 </nav>
 
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Logs
+        </h1>
+        
+      </div>
     </div>
   </header>
 
 
     <main class="pb7" role="main">
       
-    <article class="center cf pv5 measure-wide-l">
-      <h1>
-        This is not the page you were looking for
-      </h1>
-    </article>
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"><p>Log collection, recording of setting up experiences.</p>
+</main>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Logs</span>
+    <h1 class="f3 near-black">
+      <a href="/logs/log_03/" class="link black dim">
+        iWork 版本管理文件清理（HFS&#43; Only）
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      13/06/2018 更新
+如今在 APFS 下，Apple 似乎已经弃用了这套版本管理逻辑，所以版本管理也不再臃肿。
+ 今天打开 About This Mac &gt; Storage &gt; Manage &gt; Review Files &gt; File Browser, 突然发现了 ~/Library/Application Support/CloudDocs/session/r 目录下大量的 iWork 版本管理文件，而且一看容量有 13.5GB（如下图）。
+ 这样来看 iWork 文件华丽的版本管理背后并不光彩，Apple 没有选择增量备份，而是简单粗暴地用副本来完成类似 Time Machine 的版本管理（如封面图）。
+ 之后不论是 File Browser 还是 Finder 都无法删除这些 History Edition 文件（如下图）。
+ 无奈只好用 rm 命令再把文件拖入 Terminal 强删（如下图）。
+ 另外不知为什么此目录下的文件虽然不是隐藏文件，但在 Terminal 中是不可见的，需 ls -a / -al（如下图）。
+ remove 完较大的 Keynote History Version 文件之后，算是清理出了不少硬盘空间，可能这就是所谓的 Purgeable 文件吧（如下图）。
+ 最后再附上清理后的效果图（如下图）。
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Logs</span>
+    <h1 class="f3 near-black">
+      <a href="/logs/log_02/" class="link black dim">
+        AirPort Extreme (5th gen.) Powered by Battery
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      为应对寝室的 “熄灯制度”，本人长期使用一款自带锂电池的便携式无线路由器 iShare，但是受限于体积与成本，路由器本身 WLAN 的速度限制较大（大概不到 20Mbps，远不及寝室宽带的 100Mbps），因此网络体验较差。而日间使用的 AirPort Time Capsule（2013 款）由于变压器内置，只能外接交流电源供电，这使得在夜间使用几乎是不可能的。
+ 为了改善寝室夜间的网络环境，结合以上情况综合考虑后，本人购入了一款二手 AirPort Extreme (5th gen.) (Model: A1408)，以下简称 A1408（如文章封面图）。A1408 的电源适配器外置，只需输入 12V 直流电即可，原装电源适配器上标示的额定输入是 12 V，1.8 A。因此，为了保证 A1408 能够整晚（23:00 - 次日 6:30）提供 WLAN，本人另购入一块 8450mah 的 12V 电池（由 18650 电芯组成）。
+ 同时因为同为 AirPort，也便于本人通过 Apple 原生 App: AirPort Utility 进行管理（如图：Time Capsule 开启 Bridge 模式）。
+ 之后的几天内，本人和室友在使用 A1408 的 WLAN 的过程中发现间歇性地出现网络不稳定的问题，发现在通过 SpeedTest 测速时，A1408 的测速结果不仅延迟比 Time Capsule 更大，且上下行速度都大打折扣。如图：第一项测速结果为 Time Capsule，其余项为 A1408。
+ 之后偶然将 A1408 的电源输入从电池改为电源适配器，再对 A1408 进行速度测试，恢复正常（如图）。
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Logs</span>
+    <h1 class="f3 near-black">
+      <a href="/logs/log_01/" class="link black dim">
+        Unlock Mac over Apple Watch
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      本人在北京时间 9 月 21 日更新了 watchOS 3 与 macOS 10.12 ，尝试使用 Apple Watch 解锁Mac的新特性，遇到了一些问题，在此记录。
+Sept. 21st, I updated my devices to watchOS 3 and macOS 10.12, trying Apple Watch&rsquo;s new feature unlocking the Mac. And there were some matters occurred, which was the reason why I logged them here.
+ “系统偏好设置”内“安全性与隐私”设置中可以找到“允许 Apple Watch 解锁 Mac ”的勾选项，但仅在满足 watchOS 3 + macOS 10.12 + 开启“双重认证”／“两步验证”的情况下会显示。
+We can find the option &ldquo;Allow your Apple Watch to unlock your Mac&rdquo; in &ldquo;System Preference&rdquo;, but the option only displays when &ldquo;watchOS 3 + macOS 10.
+    </div>
+  </div>
+</div>
+</div>
+      
+    </section>
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/logs/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/logs/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/logs/">1</a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/logs/page/2/">2</a>
+  </li>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/logs/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
+
+</article>
 
     </main>
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
