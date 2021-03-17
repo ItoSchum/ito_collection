@@ -15,6 +15,11 @@ featured_image: '/images/log_06/m1-chip.jpg'
 	- To install Xcode IDE: `mas install Xcode`
 
 ### Test Environment
+
+- Visual Studio Code 1.54.3 (Universal)
+	- Commit: 2b9aebd5354a3629c3aba0a5f5df49f43d6689f8
+	- Extension: ms-vscode.cpptools v1.2.2  
+
 - macOS 11.2.3
 
 	```Bash
@@ -30,11 +35,7 @@ featured_image: '/images/log_06/m1-chip.jpg'
 	Target: arm64-apple-darwin20.3.0
 	Thread model: posix
 	InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-	
 	```
-- Visual Studio Code 1.54.3 (Universal)
-	- Commit: 2b9aebd5354a3629c3aba0a5f5df49f43d6689f8
-	- Extension: ms-vscode.cpptools v1.2.2  
 
 ## Setup
 
