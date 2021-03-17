@@ -22,7 +22,6 @@ featured_image: '/images/log_06/m1-chip.jpg'
 	Darwin Kernel Version 20.3.0: Thu Jan 21 00:06:51 PST 2021; 
 	root:xnu-7195.81.3~1/RELEASE_ARM64_T8101
 	```
-	
 - Xcode 12.4 (12D4e)
 	
 	```Bash
@@ -31,8 +30,8 @@ featured_image: '/images/log_06/m1-chip.jpg'
 	Target: arm64-apple-darwin20.3.0
 	Thread model: posix
 	InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-	```
 	
+	```
 - Visual Studio Code 1.54.3 (Universal)
 	- Commit: 2b9aebd5354a3629c3aba0a5f5df49f43d6689f8
 	- Extension: ms-vscode.cpptools v1.2.2  
